@@ -68,3 +68,12 @@ Esta seção reúne três exemplos didáticos de fluxo de trabalho com Git e Git
 6. Não faça merge automaticamente: use os PRs para praticar revisão, discussão e decisão.
 
 > **Observação:** os três Pull Requests foram criados como exemplos e permanecem abertos para revisão. A existência de um PR não significa que a alteração foi aprovada ou integrada.
+
+## Documentos de colaboração e governança
+
+- [Código de Conduta](CODE_OF_CONDUCT.md) — orientações para uma colaboração respeitosa.
+- [Como Contribuir](CONTRIBUTING.md) — fluxo de branches, commits, Issues e Pull Requests.
+- [Licença MIT](LICENSE) — condições de reutilização e distribuição do material.
+- [Política de Segurança](SECURITY.md) — como comunicar problemas de segurança de forma responsável.
+
+Consulte esses documentos antes de contribuir. Os exemplos deste repositório são didáticos; não presuma que APIs, funcionalidades ou testes descritos estejam implementados sem verificar o projeto.
