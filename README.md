@@ -78,14 +78,28 @@ Esta seção reúne três exemplos didáticos de fluxo de trabalho com Git e Git
 
 Consulte esses documentos antes de contribuir. Os exemplos deste repositório são didáticos; não presuma que APIs, funcionalidades ou testes descritos estejam implementados sem verificar o projeto.
 
-## Integração contínua (CI)
+## Integração contínua (CI), testes e simulação de deploy
 
-O repositório possui uma pipeline básica do GitHub Actions em [`.github/workflows/documentacao.yml`](.github/workflows/documentacao.yml).
+A pipeline do GitHub Actions está em [`.github/workflows/documentacao.yml`](.github/workflows/documentacao.yml). Ela é executada em `push` para `main`, em Pull Requests direcionados a `main` e também pode ser iniciada manualmente pela aba **Actions**.
 
-A execução é disparada quando há `push` para `main`, abertura/atualização de Pull Request direcionado a `main` ou acionamento manual. A pipeline:
+### Etapas da pipeline
 
-1. Faz checkout do repositório.
-2. Verifica se os documentos essenciais existem e não estão vazios.
-3. Executa uma verificação básica de espaços em branco com `git diff --check`.
+1. **Validação documental:** verifica se os arquivos essenciais existem e não estão vazios.
+2. **Testes básicos:** executa `scripts/testes-basicos.sh`, que confere os documentos principais, a pasta `docs/`, a presença de arquivos Markdown e marcadores comuns de conteúdo pendente.
+3. **Verificação de espaços em branco:** executa `git diff --check`.
+4. **Simulação de deploy:** após os testes passarem, reúne os documentos em `deploy-preview/` e valida se o pacote contém os arquivos principais.
+5. **Artefato:** envia o pacote como artefato do GitHub Actions com o nome `simulacao-deploy-documentacao`, disponível por 7 dias na página da execução.
 
-Essa pipeline valida alguns aspectos estruturais da documentação. **Ela não executa testes de aplicação, não verifica todos os links e não garante a correção do conteúdo.**
+### Executar os testes localmente
+
+Em um ambiente com Bash, na raiz do repositório:
+
+```bash
+bash scripts/testes-basicos.sh
+```
+
+### O que significa simular o deploy?
+
+A pipeline prepara um pacote com o README, as políticas e os documentos para demonstrar uma etapa de publicação. Você pode baixar o artefato na execução do workflow e inspecionar seu conteúdo.
+
+**Importante:** isso não publica um site nem faz deploy em um servidor. Os testes são verificações estruturais básicas; não validam todos os links, a qualidade editorial ou o funcionamento de uma aplicação.
