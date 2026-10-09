@@ -77,3 +77,15 @@ Esta seção reúne três exemplos didáticos de fluxo de trabalho com Git e Git
 - [Política de Segurança](SECURITY.md) — como comunicar problemas de segurança de forma responsável.
 
 Consulte esses documentos antes de contribuir. Os exemplos deste repositório são didáticos; não presuma que APIs, funcionalidades ou testes descritos estejam implementados sem verificar o projeto.
+
+## Integração contínua (CI)
+
+O repositório possui uma pipeline básica do GitHub Actions em [`.github/workflows/documentacao.yml`](.github/workflows/documentacao.yml).
+
+A execução é disparada quando há `push` para `main`, abertura/atualização de Pull Request direcionado a `main` ou acionamento manual. A pipeline:
+
+1. Faz checkout do repositório.
+2. Verifica se os documentos essenciais existem e não estão vazios.
+3. Executa uma verificação básica de espaços em branco com `git diff --check`.
+
+Essa pipeline valida alguns aspectos estruturais da documentação. **Ela não executa testes de aplicação, não verifica todos os links e não garante a correção do conteúdo.**
