@@ -1,0 +1,44 @@
+name: CI - Documentação
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar-documentacao:
+    name: Validar arquivos Markdown
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Verificar documentos essenciais
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          arquivos=(
+            "README.md"
+            "CODE_OF_CONDUCT.md"
+            "CONTRIBUTING.md"
+            "LICENSE"
+            "SECURITY.md"
+          )
+
+          for arquivo in "${arquivos[@]}"; do
+            if [[ ! -s "$arquivo" ]]; then
+              echo "::error::Arquivo ausente ou vazio: $arquivo"
+              exit 1
+            fi
+            echo "OK: $arquivo"
+          done
+
+      - name: Verificar espaços em branco
+        run: git diff --check
