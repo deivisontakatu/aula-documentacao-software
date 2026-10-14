@@ -108,40 +108,6 @@ A pipeline prepara um pacote com o README, as políticas e os documentos para de
 
 As melhorias de documentação podem ser acompanhadas como Issues do GitHub. Cada cartão contém contexto, escopo sugerido, critérios de aceite e evidências esperadas. Eles foram criados como atividades didáticas e devem ser adaptados ao projeto real; a abertura de uma Issue não significa que a atividade esteja implementada.
 
-### Cartões adicionais
-
-| # | Atividade | Foco |
-|---:|---|---|
-| [#24](https://github.com/deivisontakatu/aula-documentacao-software/issues/24) | Visão geral do produto e contexto de uso | Problema, público e proposta de valor |
-| [#25](https://github.com/deivisontakatu/aula-documentacao-software/issues/25) | Especificar escopo, objetivos e fora de escopo | Limites e entregas |
-| [#26](https://github.com/deivisontakatu/aula-documentacao-software/issues/26) | Catalogar requisitos funcionais com identificadores | Requisitos verificáveis |
-| [#27](https://github.com/deivisontakatu/aula-documentacao-software/issues/27) | Documentar requisitos não funcionais e métricas | Desempenho, segurança e qualidade |
-| [#28](https://github.com/deivisontakatu/aula-documentacao-software/issues/28) | Definir histórias de usuário e critérios de aceite | Necessidades e validação |
-| [#29](https://github.com/deivisontakatu/aula-documentacao-software/issues/29) | Criar matriz de rastreabilidade de requisitos | Relação entre requisitos, implementação e testes |
-| [#30](https://github.com/deivisontakatu/aula-documentacao-software/issues/30) | Elaborar diagrama de contexto do sistema | Atores e integrações |
-| [#31](https://github.com/deivisontakatu/aula-documentacao-software/issues/31) | Documentar arquitetura e responsabilidades dos módulos | Componentes e decisões técnicas |
-| [#32](https://github.com/deivisontakatu/aula-documentacao-software/issues/32) | Descrever modelo de dados e dicionário de dados | Entidades, atributos e integridade |
-| [#33](https://github.com/deivisontakatu/aula-documentacao-software/issues/33) | Padronizar documentação dos endpoints da API | Rotas, contratos e erros |
-| [#34](https://github.com/deivisontakatu/aula-documentacao-software/issues/34) | Documentar autenticação, autorização e permissões | Acesso seguro |
-| [#35](https://github.com/deivisontakatu/aula-documentacao-software/issues/35) | Criar guia de instalação e configuração local | Preparação do ambiente |
-| [#36](https://github.com/deivisontakatu/aula-documentacao-software/issues/36) | Documentar variáveis de ambiente e configuração | Configuração sem expor segredos |
-| [#37](https://github.com/deivisontakatu/aula-documentacao-software/issues/37) | Escrever guia do usuário com fluxos principais | Instruções operacionais |
-| [#38](https://github.com/deivisontakatu/aula-documentacao-software/issues/38) | Criar FAQ e catálogo de problemas comuns | Diagnóstico e suporte |
-| [#39](https://github.com/deivisontakatu/aula-documentacao-software/issues/39) | Documentar plano de testes e evidências | Casos, resultados e reprodução |
-| [#40](https://github.com/deivisontakatu/aula-documentacao-software/issues/40) | Documentar branches, commits e Pull Requests | Processo de colaboração |
-| [#41](https://github.com/deivisontakatu/aula-documentacao-software/issues/41) | Registrar pipeline CI e critérios de qualidade | Integração contínua |
-| [#42](https://github.com/deivisontakatu/aula-documentacao-software/issues/42) | Documentar deploy, rollback e recuperação | Publicação e retorno à versão anterior |
-| [#43](https://github.com/deivisontakatu/aula-documentacao-software/issues/43) | Revisar acessibilidade, links e qualidade editorial | Revisão final |
-
-### Como trabalhar com os cartões
-
-1. Escolha uma Issue e leia o contexto, o escopo sugerido e os critérios de aceite.
-2. Verifique o código e os documentos existentes antes de começar, evitando duplicações.
-3. Crie uma branch específica para a atividade e faça alterações pequenas e revisáveis.
-4. Atualize a documentação em Markdown e inclua exemplos fictícios quando precisar ilustrar dados ou configurações.
-5. Abra um Pull Request relacionando a Issue, descreva as alterações e marque os critérios atendidos.
-6. Revise os links e a consistência com o projeto real. Conclua a Issue somente depois da revisão e integração acordadas.
-
 ### Critérios gerais de qualidade
 
 - A documentação deve permitir que outra pessoa compreenda ou reproduza a atividade sem depender de explicações verbais.
